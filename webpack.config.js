@@ -6,7 +6,8 @@ module.exports = {
   entry: {
     index: './src/index.js',
     test: "./src/test.js",
-    dropdown:"./src/dropdown.js"
+    dropdown:"./src/dropdown.js",
+    slider: "./src/slider.js"
   },
   output: {
     filename: '[name].bundle.js',
@@ -17,6 +18,10 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
